@@ -1,6 +1,4 @@
-/* static/styles.css */
-
-
+/* Genel stil ayarları */
 body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f9;
@@ -24,63 +22,103 @@ h1 {
 }
 
 form {
+    justify-content: center;
+    align-items: center;
     display: flex;
-    margin-bottom: 20px;
+    
+
 }
 
 input[type="text"] {
-    flex: 1;
     padding: 10px;
+    width: 300px;
     font-size: 16px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
+    border: 3px solid rgb(28, 138, 6);
+    border-radius: 50px;
+    max-lines: 5;
+    transition: transform 0.2s ease, box-shadow 0.2s ease; /* Hover animasyonu */
 }
 
+input[type="text"]:hover{
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
 
+/* Liste stili */
 ul {
-    list-style: none;
+    list-style: none; /* Liste işaretlerini kaldır */
     padding: 0;
+    margin: 0;
+    max-width: 25%;
+    max-height: 25%;
+    display: flexbox;
 }
 
 li {
-    padding: 10px;
-    border-bottom: 1px solid #ddd;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px;
+    margin-left: 30px;
+    max-width: 500px;
+    max-height: 300px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease; /* Hover animasyonu */
 }
 
-#delete_btn{
-    color: #333;
-    margin-left: 10px;
-    size: 30px;
-    
+/* Hover durumunda büyüme ve gölge */
+li:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
 }
 
-/* Animasyonlu bağlantı */
-.animated-link-delete {
-    display: inline-block;
-    padding: 10px 20px;
+/* Tamamlanan iş metni */
+li span {
+    flex-grow: 1;
     font-size: 16px;
-    color: #ffffff;
-    background-color: red;
+    font-weight: 600;
+    color: #333;
+}
+
+/* Tamamlanmış işler için metin üzerine çizgi */
+li span[style="text-decoration: line-through"] {
+    text-decoration: line-through;
+    color: #777;
+    filter: blur(4px) ; /* 4px bulanıklaştırma */
+    transition: filter 0.3s ease; /* Geçiş efekti */
+}
+
+/* Animasyonlu silme bağlantısı */
+.animated-link-delete {
+    padding: 10px 20px;
+    margin-left: 10px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #e74c3c;
     text-decoration: none;
     border-radius: 5px;
     transition: all 0.3s ease;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Başlangıçtaki hafif gölge */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* Hover durumunda renk değişimi ve büyüme */
+/* Silme butonunda hover efekti */
 .animated-link-delete:hover {
-    background-color: red;  /* Renk değişimi */
-    transform: scale(1.05);  /* Buton büyür */
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);  /* Gölge daha belirgin hale gelir */
+    background-color: #c0392b; /* Koyu kırmızı */
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
-/* Tıklama anında */
+/* Silme butonunda tıklama efekti */
 .animated-link-delete:active {
-    transform: scale(1);  /* Tıklama sırasında boyut geri döner */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);  /* Daha hafif gölge */
+    transform: scale(1);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-/* Tıklama animasyonu */
+/* Başlangıçtaki animasyon efekti */
 .animated-link-delete.clicked {
     animation: click-animation 0.3s forwards;
 }
@@ -88,7 +126,7 @@ li {
 @keyframes click-animation {
     0% {
         transform: scale(1);
-        background-color: #45a049;
+        background-color: #e74c3c;
     }
     50% {
         transform: scale(0.95);
@@ -98,34 +136,34 @@ li {
     }
 }
 
-#complete_btn{
-    margin-left: 100px;
-
+/* Tamamla/geri al bağlantısı */
+#complete_btn {
+    margin-left: 20px;
 }
-/* Animasyonlu bağlantı */
+
+/* Tamamla/geri al animasyonlu bağlantı */
 .animated-link {
-    display: inline-block;
     padding: 10px 20px;
     font-size: 16px;
-    color: #ffffff;
+    color: #fff;
     background-color: #4CAF50;
     text-decoration: none;
     border-radius: 5px;
     transition: all 0.3s ease;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Başlangıçtaki hafif gölge */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 /* Hover durumunda renk değişimi ve büyüme */
 .animated-link:hover {
-    background-color: #45a049;  /* Renk değişimi */
-    transform: scale(1.05);  /* Buton büyür */
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);  /* Gölge daha belirgin hale gelir */
+    background-color: #45a049; /* Yeşil tonunda değişim */
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
-/* Tıklama anında */
+/* Tıklama durumunda animasyon */
 .animated-link:active {
-    transform: scale(1);  /* Tıklama sırasında boyut geri döner */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);  /* Daha hafif gölge */
+    transform: scale(1);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 /* Tıklama animasyonu */
@@ -136,7 +174,7 @@ li {
 @keyframes click-animation {
     0% {
         transform: scale(1);
-        background-color: #45a049;
+        background-color: #4CAF50;
     }
     50% {
         transform: scale(0.95);
@@ -145,31 +183,32 @@ li {
         transform: scale(1);
     }
 }
-/* Ekle Butonu bu*/
-/* Temel buton stili */
+
+/* Ekle Butonu */
 .animated-button {
     background-color: #4CAF50; /* Yeşil arka plan */
     color: white; /* Beyaz yazı */
-    border: none; /* Kenarlık yok */
-    padding: 12px 24px; /* İçerik etrafında boşluk */
-    text-align: center; /* Metni ortala */
-    text-decoration: none; /* Alt çizgi yok */
-    display: inline-block; /* Satır içi blok */
-    font-size: 16px; /* Yazı boyutu */
-    cursor: pointer; /* Fareyi üzerine getirdiğinde el simgesi */
-    border-radius: 8px; /* Kenarları yuvarlat */
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Buton hareketi ve gölge geçişi */
-  }
-  
-  /* Hover durumu: Butona tıklandığında */
-  .animated-button:hover {
+    border: none;
+    padding: 12px 24px;
+    margin-left: 30px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover durumu: Butona tıklandığında */
+.animated-button:hover {
     transform: scale(1.1); /* Butonu %10 büyüt */
-    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2); /* Butona hafif bir gölge ekle */
-  }
-  
-  /* Focus durumu: Butona tıklanıp odaklanıldığında */
-  .animated-button:focus {
-    outline: none; /* Odak kenarlığını kaldır */
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.6); /* Buton etrafında beyaz bir parlama */
-  }
-  
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2); /* Hafif gölge ekle */
+}
+
+/* Focus durumu: Butona tıklanıp odaklanıldığında */
+.animated-button:focus {
+    outline: none;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.6); /* Buton etrafında beyaz parlama */
+}
+

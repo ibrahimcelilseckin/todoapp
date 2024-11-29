@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 {% block content %}
 <form method="POST" action="{{ url_for('main.add_todo') }}">
-    <input class="input-text" type="text" name="task" placeholder="Yeni bir iş ekle..." required>
+    <input class="todo-input" cl type="text" name="task" placeholder="Yeni bir iş ekle..." required>
     <button type="submit" class="animated-button">Ekle</button>
 
 </form>
