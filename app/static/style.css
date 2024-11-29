@@ -1,0 +1,175 @@
+/* static/styles.css */
+
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 80%;
+    max-width: 300px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+form {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+input[type="text"] {
+    flex: 1;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+#delete_btn{
+    color: #333;
+    margin-left: 10px;
+    size: 30px;
+    
+}
+
+/* Animasyonlu bağlantı */
+.animated-link-delete {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #ffffff;
+    background-color: red;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Başlangıçtaki hafif gölge */
+}
+
+/* Hover durumunda renk değişimi ve büyüme */
+.animated-link-delete:hover {
+    background-color: red;  /* Renk değişimi */
+    transform: scale(1.05);  /* Buton büyür */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);  /* Gölge daha belirgin hale gelir */
+}
+
+/* Tıklama anında */
+.animated-link-delete:active {
+    transform: scale(1);  /* Tıklama sırasında boyut geri döner */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);  /* Daha hafif gölge */
+}
+
+/* Tıklama animasyonu */
+.animated-link-delete.clicked {
+    animation: click-animation 0.3s forwards;
+}
+
+@keyframes click-animation {
+    0% {
+        transform: scale(1);
+        background-color: #45a049;
+    }
+    50% {
+        transform: scale(0.95);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+#complete_btn{
+    margin-left: 100px;
+
+}
+/* Animasyonlu bağlantı */
+.animated-link {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #ffffff;
+    background-color: #4CAF50;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Başlangıçtaki hafif gölge */
+}
+
+/* Hover durumunda renk değişimi ve büyüme */
+.animated-link:hover {
+    background-color: #45a049;  /* Renk değişimi */
+    transform: scale(1.05);  /* Buton büyür */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);  /* Gölge daha belirgin hale gelir */
+}
+
+/* Tıklama anında */
+.animated-link:active {
+    transform: scale(1);  /* Tıklama sırasında boyut geri döner */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);  /* Daha hafif gölge */
+}
+
+/* Tıklama animasyonu */
+.animated-link.clicked {
+    animation: click-animation 0.3s forwards;
+}
+
+@keyframes click-animation {
+    0% {
+        transform: scale(1);
+        background-color: #45a049;
+    }
+    50% {
+        transform: scale(0.95);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+/* Ekle Butonu bu*/
+/* Temel buton stili */
+.animated-button {
+    background-color: #4CAF50; /* Yeşil arka plan */
+    color: white; /* Beyaz yazı */
+    border: none; /* Kenarlık yok */
+    padding: 12px 24px; /* İçerik etrafında boşluk */
+    text-align: center; /* Metni ortala */
+    text-decoration: none; /* Alt çizgi yok */
+    display: inline-block; /* Satır içi blok */
+    font-size: 16px; /* Yazı boyutu */
+    cursor: pointer; /* Fareyi üzerine getirdiğinde el simgesi */
+    border-radius: 8px; /* Kenarları yuvarlat */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Buton hareketi ve gölge geçişi */
+  }
+  
+  /* Hover durumu: Butona tıklandığında */
+  .animated-button:hover {
+    transform: scale(1.1); /* Butonu %10 büyüt */
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2); /* Butona hafif bir gölge ekle */
+  }
+  
+  /* Focus durumu: Butona tıklanıp odaklanıldığında */
+  .animated-button:focus {
+    outline: none; /* Odak kenarlığını kaldır */
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.6); /* Buton etrafında beyaz bir parlama */
+  }
+  
