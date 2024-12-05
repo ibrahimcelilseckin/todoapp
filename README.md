@@ -1,85 +1,88 @@
 # Todo App
 
-Bu, basit bir Todo uygulamasıdır. Kullanıcılar, yapılacak işleri ekleyebilir, tamamlanmış işleri işaretleyebilir ve silebilirler. Uygulama Flask web framework'ü kullanılarak geliştirilmiştir.
+This is a simple Todo application. Users can add tasks, mark them as completed, and delete them. The application is built using the Flask web framework.
 
-## Özellikler
+## Features
 
-- Yeni Todo (yapılacak iş) ekleyebilme
-- Todo'yu tamamlanmış olarak işaretleyebilme
-- Todo'yu geri alabilme (tamamlanmış işin geri alınması)
-- Todo'yu silebilme
-- Basit ve kullanıcı dostu arayüz
+- Add new Todos (tasks)
+- Mark Todos as completed
+- Undo completed Todos (mark as incomplete)
+- Delete Todos
+- Simple and user-friendly interface
 
-## Teknolojiler
+## Technologies
 
-- **Flask**: Python tabanlı web framework
-- **HTML/CSS**: Kullanıcı arayüzü için temel yapı ve stil
-- **SQLite/PostgreSQL**: Veritabanı (seçime bağlı)
-- **JavaScript (isteğe bağlı)**: Dinamik içerik için (animasyonlar, AJAX vb.)
-  
-## Kurulum
+- **Flask**: Python-based web framework
+- **HTML/CSS**: Structure and styling for the user interface
+- **SQLite/PostgreSQL**: Database (optional selection)
+- **JavaScript (optional)**: For dynamic content (animations, AJAX, etc.)
 
-### Gereksinimler
+## Installation
+
+### Requirements
 
 - Python 3.x
-- Pip (Python paket yöneticisi)
+- Pip (Python package manager)
 
-### Adımlar
+### Steps
 
-1. **Repo'yu klonla**:
+1. **Clone the repository**:
     ```bash
     git clone https://github.com/<ibrahimcelilseckin>/todo-app.git
     cd todo-app
     ```
 
-2. **Gerekli paketleri yükle**:
+2. **Install the required packages**:
     ```bash
     pip install -r requirements.txt
     ```
 
-3. **Veritabanını başlat** (SQLite ya da PostgreSQL seçimine göre):
-    - Eğer SQLite kullanıyorsanız, veritabanı otomatik olarak oluşturulacaktır.
-    - Eğer PostgreSQL kullanıyorsanız, `config.py` dosyasındaki veritabanı ayarlarını yapılandırarak `flask db init` komutunu çalıştırabilirsiniz.
+3. **Initialize the database** (based on SQLite or PostgreSQL):
+    - If you are using SQLite, the database will be created automatically.
+    - If you are using PostgreSQL, configure the database settings in the `config.py` file and run:
+      ```bash
+      flask db init
+      ```
 
-4. **Uygulamayı başlat**:
+4. **Start the application**:
     ```bash
     flask run
     ```
 
-    Bu komut, uygulamanızı yerel sunucuda çalıştıracak ve [http://localhost:5000](http://localhost:5000) adresinde erişilebilir olacaktır.
+    This will start the application on your local server, accessible at [http://localhost:5000](http://localhost:5000).
 
-## Kullanım
+## Usage
 
-- **Todo Ekleme**: Uygulamanın ana sayfasındaki input alanına yeni bir todo girip "Ekle" butonuna tıklayın.
-- **Todo Tamamlandı**: Bir todo'nun tamamlandığını işaretlemek için "Tamamlandı" butonuna tıklayın.
-- **Todo Geri Al**: Tamamlanmış bir todo'yu geri almak için "Geri Al" butonuna tıklayın.
-- **Todo Silme**: Bir todo'yu silmek için çöp kutusu simgesine tıklayın.
+- **Add Todo**: Enter a new task in the input field on the home page and click the "Add" button.
+- **Mark as Completed**: Click the "Completed" button to mark a task as done.
+- **Undo Completed Todo**: Click the "Undo" button to revert a completed task to incomplete.
+- **Delete Todo**: Click the trash icon to delete a task.
 
-## Katkıda Bulunma
+## Contributing
 
-1. Bu repo'yu kendi bilgisayarınıza klonlayın:
+1. Clone this repository to your local machine:
     ```bash
-    git clone https://github.com/<kullanıcı_adı>/todo-app.git
+    git clone https://github.com/<your_username>/todo-app.git
     ```
 
-2. Yeni bir branch oluşturun:
+2. Create a new branch:
     ```bash
-    git checkout -b yeni-ozellik
+    git checkout -b new-feature
     ```
 
-3. Yapmak istediğiniz değişiklikleri gerçekleştirin ve commit edin:
+3. Make your changes and commit them:
     ```bash
     git add .
-    git commit -m "Yapılacak iş ekleme özelliği"
+    git commit -m "Add task creation feature"
     ```
 
-4. Değişikliklerinizi GitHub'a gönderin:
+4. Push your changes to GitHub:
     ```bash
-    git push origin yeni-ozellik
+    git push origin new-feature
     ```
 
-5. GitHub üzerinden bir pull request (PR) oluşturun.
+5. Open a pull request (PR) on GitHub.
 
-## Lisans
+## License
 
-Bu proje [MIT Lisansı](LICENSE) ile lisanslanmıştır.
+This project is licensed under the [MIT License](LICENSE).
