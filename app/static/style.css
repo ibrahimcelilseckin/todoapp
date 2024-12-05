@@ -35,20 +35,20 @@ form {
     align-items: center;
 }
 
-/* Sayfanın alt kısmında ortalanmış sosyal medya div'i */
+
 .social-media-footer {
     position: fixed;
     bottom: 0;
     left: 50%;
-    transform: translateX(-50%);  /* Ortalamak için */
-    width: 30%;  /* Genişlik %30 */
-    background-color: #DEB887;  /* Arka plan rengini şeffaf siyah yapalım */
+    transform: translateX(-50%);  
+    width: 30%;  
+    background-color: #DEB887;  
     padding: 10px 0;
     display: flex;
-    justify-content: space-around;  /* Simge aralarına eşit boşluk */
+    justify-content: space-around;  
     align-items: center;
-    border-radius: 10px 10px 0 0;  /* Yuvarlatılmış köşeler */
-    z-index: 9999;  /* Diğer içeriklerin üstünde görünmesi için */
+    border-radius: 10px 10px 0 0;  
+    z-index: 9999;  
 }
 
 
