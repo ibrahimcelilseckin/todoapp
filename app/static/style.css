@@ -24,9 +24,9 @@ body {
 }
 
 h1 {
-    text-align: center;
-    color: #333;
-    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 form {
@@ -34,6 +34,36 @@ form {
     justify-content: center;
     align-items: center;
 }
+
+/* Sayfanın alt kısmında ortalanmış sosyal medya div'i */
+.social-media-footer {
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);  /* Ortalamak için */
+    width: 30%;  /* Genişlik %30 */
+    background-color: #DEB887;  /* Arka plan rengini şeffaf siyah yapalım */
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-around;  /* Simge aralarına eşit boşluk */
+    align-items: center;
+    border-radius: 10px 10px 0 0;  /* Yuvarlatılmış köşeler */
+    z-index: 9999;  /* Diğer içeriklerin üstünde görünmesi için */
+}
+
+
+.social-media-footer img {
+    width: 50px;  
+    height: 50px; 
+    transition: transform 0.3s ease;  
+}
+
+
+.social-media-footer a:hover img {
+    transform: scale(1.1);  
+}
+
+
 
 input[type="text"] {
     padding: 10px;
